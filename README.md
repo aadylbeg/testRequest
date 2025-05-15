@@ -174,3 +174,81 @@ This project is a **Request Management System** built using **Node.js**, **Expre
      await client.end();
    }
    ```
+
+2. **`runMigrations()`**
+
+   - Runs all pending migrations to ensure the database schema is up-to-date.
+
+   ```javascript
+   const { sequelize } = require("../models");
+
+   async function runMigrations() {
+     await sequelize.sync({ alter: true });
+     console.log("Migrations have been run successfully.");
+   }
+   ```
+
+---
+
+## Tech Stack
+
+- **Node.js**: JavaScript runtime for building the server.
+- **Express.js**: Web framework for handling routes and middleware.
+- **Sequelize**: ORM for interacting with the PostgreSQL database.
+- **PostgreSQL**: Relational database for storing requests.
+- **JavaScript**: Programming language used for the back-end.
+
+---
+
+## Installation and Setup
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd testRequest
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables:**
+   Create a `.env` file in the root directory and add the following:
+
+   ```
+   PORT=3000
+   DB_HOST=localhost
+   DB_USERNAME=your_db_username
+   DB_PASSWORD=your_db_password
+   DB_NAME=request_management
+   ```
+
+4. **Run the Application:**
+
+   ```bash
+   npm start
+   ```
+
+5. **Run Migrations:**
+   Uncomment the `runMigrations()` line in `server.js` to apply migrations automatically.
+
+---
+
+## How to Use
+
+1. Start the server using `npm start`.
+2. Use tools like **Postman** or **cURL** to interact with the API.
+3. Use the provided endpoints to create, update, and retrieve requests.
+
+---
+
+## Notes
+
+- All requests are anonymous; no user authentication is implemented.
+- The system supports filtering requests by date and status for better management.
+- The database schema is managed using Sequelize migrations.
+
+Feel free to extend the project as needed!
