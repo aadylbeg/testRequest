@@ -45,7 +45,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 1. **Create a Request**
 
 - **Method:** `POST`
-- **Endpoint:** `/api/requests`
+- **Endpoint:** `/api/v1/requests`
 - **Request Body:**
   ```json
   {
@@ -68,7 +68,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 2. **Take a Request into Work**
 
 - **Method:** `PUT`
-- **Endpoint:** `/api/requests/:id`
+- **Endpoint:** `/api/v1/requests/:id`
 - **Request Body:**
   ```json
   {
@@ -79,7 +79,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 3. **Complete a Request**
 
 - **Method:** `PUT`
-- **Endpoint:** `/api/requests/:id`
+- **Endpoint:** `/api/v1/requests/:id`
 - **Request Body:**
   ```json
   {
@@ -91,7 +91,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 4. **Cancel a Request**
 
 - **Method:** `PUT`
-- **Endpoint:** `/api/requests/:id`
+- **Endpoint:** `/api/v1/requests/:id`
 - **Request Body:**
   ```json
   {
@@ -103,7 +103,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 5. **Get a List of Requests**
 
 - **Method:** `GET`
-- **Endpoint:** `/api/requests`
+- **Endpoint:** `/api/v1/requests`
 - **Query Parameters:**
   - `keyword`: Search by title or description.
   - `status`: Filter by status (`CREATED`, `PROCESS`, `COMPLETED`, `CANCELED`).
@@ -129,7 +129,7 @@ This project is a **Request Management System** built using **Node.js**, **Expre
 ### 6. **Cancel All Requests in Progress**
 
 - **Method:** `PUT`
-- **Endpoint:** `/api/requests/cancel-in-progress`
+- **Endpoint:** `/api/v1/requests/cancel-in-progress`
 - **Response:**
   ```json
   {
